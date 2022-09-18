@@ -1,9 +1,9 @@
-import { useRef } from "react";
+import { useRef, useCallback } from "react";
 
 export const useDebounce = (cb : (...args: any[]) => void, delay = 2000) => {
     const timeoutRef = useRef<undefined | NodeJS.Timeout>(undefined);
 
-    const fn = (...args: any[]) => {
+    const fn = useCallback((...args: any[]) => {
         if (timeoutRef.current) {
             clearTimeout(timeoutRef.current);
         }
@@ -12,7 +12,7 @@ export const useDebounce = (cb : (...args: any[]) => void, delay = 2000) => {
             cb(...args);
             timeoutRef.current = undefined;
         }, delay);
-    };
+    }, [cb, delay]);
 
     return fn;
 };
