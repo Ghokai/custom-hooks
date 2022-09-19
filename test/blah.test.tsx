@@ -1,10 +1,9 @@
 import React from 'react';
 import * as ReactDOM from 'react-dom';
 
-
 const Thing = () => {
   return <div></div>;
-}
+};
 
 describe('Thing', () => {
   it('renders without crashing', () => {
