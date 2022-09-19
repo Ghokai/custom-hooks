@@ -1,6 +1,10 @@
 import React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Default as Thing } from '../stories/Thing.stories';
+
+
+const Thing = () => {
+  return <div></div>;
+}
 
 describe('Thing', () => {
   it('renders without crashing', () => {
