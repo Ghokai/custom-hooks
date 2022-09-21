@@ -7,7 +7,7 @@ const MouseHoverDemoComponent = () => {
     const { elementRef, isMouseOver } = useMouseHover<HTMLDivElement>();
 
     return (
-        <div ref={elementRef} style={{height: '300px', width: '400px', backgroundColor: '#345623', border: '1px solid'}}>
+        <div ref={elementRef} style={{height: '300px', width: '400px', backgroundColor: '#345623'}}>
           {isMouseOver ? 'mouse is hovering' : 'mouse is not hovering'}
         </div>
     );

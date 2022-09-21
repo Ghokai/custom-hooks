@@ -29,8 +29,6 @@ export const useMouseHover = <T extends HTMLElement>() => {
     };
   }, [isMouseOver, setIsMouseOver]);
 
-  console.log({ isMouseOver });
-
   return { elementRef, isMouseOver };
 };
 
